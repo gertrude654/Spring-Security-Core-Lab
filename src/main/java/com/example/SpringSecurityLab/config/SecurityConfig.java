@@ -30,11 +30,7 @@ public class SecurityConfig {
                         form -> form
                                 .defaultSuccessUrl("/homeR", true)
                 )
-//                .logout(logout -> logout
-//                        .logoutUrl("/logout")  // Default logout URL
-//                        .logoutSuccessUrl("/login?logout")  // Redirect after logout
-//                        .permitAll()
-//                )
+//
                 .logout(
                         logout -> logout
                                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
